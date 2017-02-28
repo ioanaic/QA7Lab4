@@ -3,17 +3,22 @@
  * @since 28/02/2017.
  */
 public class Person {
+    public static int persoaneCreate = 0;
     private String prenume;
     private String nume;
     private int ziNastere;
+    public int id;
+    String cucu;
 
     public Person() {
     }
 
-    public Person(String prenume, String nume, int x) {
+    public Person (String prenume, String nume, int x) {
         this.prenume = prenume;
         this.nume = nume;
         ziNastere = x;
+        persoaneCreate = persoaneCreate + 1;
+        this.id = persoaneCreate;
     }
 
     public String getPrenume() {
@@ -38,6 +43,10 @@ public class Person {
 
     public int getZiNastere() {
         return ziNastere;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public static void main(String[] args) {
