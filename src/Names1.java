@@ -6,24 +6,26 @@ public class Names1 {
 
     public static void main(String[] args) {
 
-        int persoane = SkeletonJava.readIntConsole("Cate persoane sa fie?");
+        int n = SkeletonJava.readIntConsole("Cate persoane sa fie?");
 
-        String[] names = new String[persoane];
-        String[] prenume = new String[persoane];
-        String[][] persona = new String[persoane][2];
+        Person[] persoane = new Person[n];
 
-
-        int[] ziuaDeNastere = new int[persoane];
-        for(int i=0; i < persoane; i++) {
-            names[i] = SkeletonJava.readStringConsole("Nume?");
-            prenume[i] = SkeletonJava.readStringConsole("Prenume?");
-            ziuaDeNastere[i] = SkeletonJava.readIntConsole("Ziua de nastere?Luni=0");
+        for(int i=0; i < n; i++) {
+            String name = SkeletonJava.readStringConsole("Nume?");
+            String prenume = SkeletonJava.readStringConsole("Prenume?");
+            int ziDeNaster = SkeletonJava.readIntConsole("Ziua de nastere?Luni=0");
+            Person person = new Person();
+            person.setPrenume(prenume);
+            person.setNume(name);
+            person.setZiNastere(ziDeNaster);
+            persoane[i] = person;
         }
 
-        for(int i=0; i< persoane;i++) {
+        for(int i=0; i< n;i++) {
             // Popescu+Victoria 8
             // Maria+Vasile 7
-            SkeletonJava.printConsole(names[i] + "+" + prenume[i] + names[i].length() + "nas" + ziuaDeNastere[i]);
+            Person perso = persoane[i];
+            SkeletonJava.printConsole(perso.getName() + "+" + perso.getPrenume() + perso.getName().length() + "nas" + perso.getZiNastere());
         }
     }
 }

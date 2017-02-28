@@ -32,6 +32,14 @@ public class Person {
         return nume;
     }
 
+    public void setZiNastere(int ziNastere) {
+        this.ziNastere = ziNastere;
+    }
+
+    public int getZiNastere() {
+        return ziNastere;
+    }
+
     public static void main(String[] args) {
         Person florin = new Person();
         Person maria = new Person();
