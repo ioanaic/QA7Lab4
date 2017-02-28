@@ -14,10 +14,7 @@ public class Names1 {
             String name = SkeletonJava.readStringConsole("Nume?");
             String prenume = SkeletonJava.readStringConsole("Prenume?");
             int ziDeNaster = SkeletonJava.readIntConsole("Ziua de nastere?Luni=0");
-            Person person = new Person();
-            person.setPrenume(prenume);
-            person.setNume(name);
-            person.setZiNastere(ziDeNaster);
+            Person person = new Person(prenume, name, ziDeNaster);
             persoane[i] = person;
         }
 
